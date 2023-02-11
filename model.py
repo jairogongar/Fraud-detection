@@ -30,7 +30,7 @@ def train_model(data):
         mlflow.log_metric("test_accuracy", rf_Classifier.score(X_test, y_test))
         mlflow.sklearn.log_model(rf_Classifier, "random-forest-model")
         
-        mlflow.register_model("runs:/{}/model".format('fraud_model'), "production")
+        #mlflow.register_model("runs:/{}/model".format('fraud_model'), "production")
         
         with open('model-0.1.0.pkl', 'wb') as f: 
             pickle.dump(rf_Classifier, f)
