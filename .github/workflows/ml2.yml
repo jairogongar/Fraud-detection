@@ -21,5 +21,12 @@ jobs:
           python-version: 3.9
       - name: Install Python Dependencies
         run: |
-          pip install poetry cookiecutter
+          pip install -r requirements.txt 
+      - name: Run model
+        run: |
+          python model.py
+      - name: Score
+        run: |
+          python scoring.py
+        
  
