@@ -14,10 +14,7 @@ from users import check_login
 
 
 def login():
-    username = input("Enter your username: ")
-    password = input("Enter your password: ")
-    if check_login(username, password):
-        print("Login successful!")
+    
         with open('model-0.1.0.pkl', "rb") as f:
             rf_Classifier = pickle.load(f)
 
