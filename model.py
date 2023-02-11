@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 import pickle
 
 data = pd.read_csv('preprocessed_data.csv')
-def train_model(data):
+#def train_model(data):
     
     #Preprocess the data
     #preprocess(data)
@@ -35,5 +35,5 @@ def train_model(data):
         with open('model-0.1.0.pkl', 'wb') as f: 
             pickle.dump(rf_Classifier, f)
             
-if __name__ == "__main__":
-    train_model(data)
+#if __name__ == "__main__":
+    #train_model(data)
