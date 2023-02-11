@@ -36,4 +36,4 @@ def train_model(data):
             pickle.dump(rf_Classifier, f)
             
 if __name__ == "__main__":
-    #train_model(data)
+    train_model(data)
