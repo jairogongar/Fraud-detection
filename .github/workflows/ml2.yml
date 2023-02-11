@@ -12,24 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
+    - name: setup python
+      uses: actions/setup-python@v4
       with:
-        node-version: 16
-
-    - name: Set up Python
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ env.PYTHON_VERSION }}
-
-    - name: Install dependencies
+          python-version: '3.9' # install the python version needed
+          
+    - name: install python packages
       run: |
-        python -m venv env
-        source env/bin/activate
-        pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+ 
 
     - name: Test
       run: |
