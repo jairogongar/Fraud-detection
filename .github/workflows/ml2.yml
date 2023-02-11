@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt 
       - name: Run model
         run: |
-          python train_model.py
+          python trainmodel.py
       - name: Score
         run: |
           python scoring.py
