@@ -25,9 +25,10 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        python -m venv $PYTHON_ENV
-        source $PYTHON_ENV/bin/activate
         pip install -r requirements.txt
-    - name: Test with pytest
+    - name: Run model
       run: |
-        pytest
+        model.py
+    - name: Scoring
+      run: |
+        scoring.py
