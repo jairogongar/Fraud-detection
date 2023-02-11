@@ -7,11 +7,11 @@ import mlflow
 from sklearn.metrics import accuracy_score
 import pickle
 
-data = pd.read_csv('application_data.csv')
+data = pd.read_csv('preprocessed_data.csv')
 def train_model(data):
     
     #Preprocess the data
-    preprocess(data)
+    #preprocess(data)
     # Target feature selection
     X = data.drop("TARGET",axis=1)
     y = data.TARGET
