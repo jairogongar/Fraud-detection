@@ -38,10 +38,9 @@ def login():
 
             else:
                 print("the accuracy of the model is:", accuracy)
-    else:
-        print("Login failed. Incorrect username or password.")
+    
 
-# Login
+
 
 if __name__=='__main__':
     login()
