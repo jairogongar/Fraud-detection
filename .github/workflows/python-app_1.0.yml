@@ -29,7 +29,7 @@ jobs:
         pip install --use-pep517 -r requirements.txt
     - name: Run the model
       run: |
-        python model.py
+        python trainmodel.py
     - name: Score model
       run: |
         python scoring.py
