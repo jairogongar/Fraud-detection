@@ -71,7 +71,7 @@ def preprocess(data):
     data['ORGANIZATION_TYPE']= label_encoder.fit_transform(data['ORGANIZATION_TYPE'])
 
     data['ORGANIZATION_TYPE'] 
-    data.drop('Target', axis=1)
+    
     data.to_csv('preprocessed_data.csv', index=False)
     return data
 
