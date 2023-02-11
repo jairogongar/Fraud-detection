@@ -7,7 +7,7 @@ import mlflow
 from sklearn.metrics import accuracy_score
 import pickle
 
-data = pd.read_csv('application_data.csv')
+data = pd.read_csv('./application_data.csv')
 def train_model(data):
     
     #Preprocess the data
