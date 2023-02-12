@@ -4,6 +4,9 @@
 name: Python application
 
 on:
+
+  schedule:
+    - cron: '0 0 1 * **' # At 00:00 on the first day each month
   push:
     branches: [ "main" ]
   pull_request:
